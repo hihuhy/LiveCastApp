@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LiveCast"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phát trực tiếp video có sẵn lên Facebook / YouTube / Twitch"
+            android:textColor="#666666"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Bước 1: chọn video -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1. Chọn video để phát"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <Button
+            android:id="@+id/btnPickVideo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chọn video từ máy" />
+
+        <TextView
+            android:id="@+id/tvSelectedVideo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chưa chọn video nào"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Bước 2: chọn nền tảng -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2. Chọn nền tảng phát trực tiếp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupPlatform"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Địa chỉ RTMP server">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etRtmpServer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Khóa luồng (Stream key)">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etStreamKey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switchLoop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tự động lặp lại video khi phát hết"
+            android:checked="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Bước 3: bắt đầu -->
+        <Button
+            android:id="@+id/btnStartStop"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Bắt đầu phát trực tiếp"
+            android:backgroundTint="#E53935"
+            android:textColor="#FFFFFF"/>
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="12dp"
+            android:text=""
+            android:textColor="#666666"/>
+
+    </LinearLayout>
+</ScrollView>
