@@ -45,5 +45,5 @@ dependencies {
 
     // Thư viện mã nguồn mở để đẩy luồng RTMP từ file video có sẵn
     // https://github.com/pedroSG94/RootEncoder
-    implementation 'com.github.pedroSG94.RootEncoder:library:2.7.3'
+    implementation 'com.github.pedroSG94.RootEncoder:library:2.6.4'
 }
